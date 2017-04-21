@@ -1,15 +1,10 @@
-from flask import Flask
+import  pyscreenshot as screenshot
 
-app = Flask(__name__)
-
-
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
-@app.route('/test')
-def hello_world2():
-    return 'Hello World2!'
+def main():
+    # test = screenshot.grab(bbox=(97,183,503,278))
+    test = screenshot.grab(bbox=(97,183,503,278))
+    test.show()
+    pass
 
 if __name__ == '__main__':
-    app.run()
+    main()
